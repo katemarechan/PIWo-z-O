@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>WELCOME TO MOONEY'S</h1>
+  <div class="nav">
+    <a href="#">Login</a> |
+    <a href="#">Register</a> |
+    <a href="#">Basket</a>
+  </div>
+</header>
+
+<main>
+  <section class="search">
+    <h2>Search</h2>
+    <form>
+      <div>
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+      </div>
+
+      <div class="filters">
+        <h3>Filter books:</h3>
+        <div>
+          <label>Price From: <input type="number" min="0"></label>
+          <label>To: <input type="number" min="0"></label>
+        </div>
+        <div>
+          <label>Cover:
+            <select>
+              <option>All</option>
+              <option>Hardcover</option>
+              <option>Paperback</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label>Page number from: <input type="number" min="0"></label>
+          <label>Page number to: <input type="number" min="0"></label>
+        </div>
+        <div>
+          <label>Author: <input type="text"></label>
+        </div>
+        <div>
+          <label>Word in description: <input type="text"></label>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <h2>Book List</h2>
+  <div>
+    <a href="index2.html">Add new position</a>
+  </div>
+</main>
+
+<footer>
+</footer>
+</body>
+</html>
