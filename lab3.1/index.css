@@ -1,0 +1,415 @@
+/*index.css*/
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    background-color: #CBF7ED; /* Mint green background */
+    color: #161925; /* Raisin black for text */
+    font-weight: 400;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(22, 25, 37, 0.1);
+}
+
+header {
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #8EA8C3; /* Powder blue */
+    background-color: #161925; /* Raisin black */
+    color: white;
+}
+
+header h1 {
+    font-family: 'Russo One', sans-serif;
+    color: #CBF7ED; /* Mint green for header */
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 2.2em;
+}
+
+h1, h2, h3, .nav button, button, .button-link {
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 0.5px;
+}
+.nav {
+    margin: 10px 0;
+    text-align: right;
+}
+
+.admin-nav {
+    margin: 10px 0;
+    padding-top: 10px;
+    border-top: 1px solid #406E8E; /* UCLA Blue */
+    text-align: center;
+}
+
+.nav a, .admin-nav a {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    margin-right: 8px;
+    text-decoration: none;
+    color: #8EA8C3; /* Powder blue */
+    transition: color 0.3s;
+}
+
+.nav a:hover, .admin-nav a:hover {
+    color: #CBF7ED; /* Mint green on hover */
+}
+
+.nav button, button {
+    background-color: #406E8E; /* UCLA Blue for buttons */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.nav button:hover, button:hover {
+    background-color: #23395B; /* Delft Blue on hover */
+}
+
+input, select, textarea {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9em;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #8EA8C3; /* Powder blue */
+    border-radius: 4px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #406E8E; /* UCLA Blue */
+    box-shadow: 0 0 0 2px rgba(64, 110, 142, 0.2);
+}
+
+.filters {
+    border: 1px solid #8EA8C3; /* Powder blue */
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background-color: rgba(142, 168, 195, 0.1); /* Light powder blue */
+}
+
+.filters h3 {
+    color: #406E8E; /* UCLA Blue */
+    border-bottom: 1px solid #8EA8C3;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.filters div {
+    margin-bottom: 15px;
+}
+
+.filters label {
+    margin-right: 15px;
+    display: inline-block;
+    color: #23395B; /* Delft Blue */
+}
+
+.books {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.book {
+    border: 1px solid #8EA8C3; /* Powder blue */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(22, 25, 37, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(22, 25, 37, 0.1);
+}
+
+.book h3 {
+    font-family: 'Russo One', sans-serif;
+    margin-top: 0;
+    color: #23395B; /* Delft Blue */
+    border-bottom: 1px solid #CBF7ED; /* Mint green */
+    padding-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.book p {
+    margin: 8px 0;
+}
+
+.book-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.book-actions button {
+    flex: 1;
+}
+
+.add-book-form label {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+}
+
+.add-book-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #23395B; /* Delft Blue */
+}
+
+.add-book-form input,
+.add-book-form select,
+.add-book-form textarea {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.not-authorized {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(142, 168, 195, 0.1); /* Light powder blue */
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #8EA8C3; /* Powder blue */
+}
+
+.not-authorized h2 {
+    color: #161925; /* Raisin black */
+}
+
+.error {
+    color: #72121F;
+    text-align: center;
+    padding: 30px;
+    background-color: #fff0f0;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #ffcccc;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #8EA8C3; /* Powder blue */
+    text-align: center;
+    color: #161925; /* Raisin black */
+    background-color: #f9f9f9;
+}
+
+#error-page {
+    text-align: center;
+    padding: 60px;
+    background-color: rgba(142, 168, 195, 0.1); /* Light powder blue */
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.my-books-btn {
+    margin-left: 10px;
+    background-color: #CBF7ED; /* Mint green */
+    color: #161925; /* Raisin black */
+    font-weight: 600;
+}
+
+.my-books-btn.active {
+    background-color: #406E8E; /* UCLA Blue when active */
+    color: white;
+}
+
+.owner-badge {
+    background-color: #CBF7ED; /* Mint green */
+    color: #161925; /* Raisin black */
+    padding: 3px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.search h2 {
+    color: #23395B; /* Delft Blue */
+    border-bottom: 1px solid #8EA8C3; /* Powder blue */
+    padding-bottom: 10px;
+}
+
+.search input[type="text"] {
+    padding: 10px 15px;
+    min-width: 300px;
+    border: 2px solid #8EA8C3; /* Powder blue */
+    border-radius: 4px;
+}
+
+.search input[type="text"]:focus {
+    border-color: #406E8E; /* UCLA Blue */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .books {
+        grid-template-columns: 1fr;
+    }
+
+    .filters label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .search input[type="text"] {
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+.loading {
+    text-align: center;
+    padding: 30px;
+    font-size: 1.2em;
+    color: #23395B;
+}
+
+.book-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-book-button {
+    margin-left: auto;
+}
+
+.button-link {
+    display: inline-block;
+    background-color: #406E8E;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #23395B;
+    color: white;
+}
+
+.search-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.price-input {
+    position: relative;
+    max-width: 400px;
+}
+
+.price-input input {
+    padding-left: 20px;
+    width: 100%;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #23395B;
+}
+
+.submitting {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.cancel-button, .clear-button {
+    background-color: #8EA8C3;
+}
+
+.cancel-button:hover, .clear-button:hover {
+    background-color: #6c8ebb;
+}
+
+.book-author {
+    font-style: italic;
+    color: #406E8E;
+}
+
+.book-price {
+    font-family: 'Russo One', sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
+    color: #23395B;
+}
+
+.book-description {
+    margin-top: 10px;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #444;
+}
+
+.error-message {
+    background-color: #ffeeee;
+    border: 1px solid #ffcccc;
+    color: #72121F;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.no-books {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(142, 168, 195, 0.1);
+    border-radius: 8px;
+    color: #23395B;
+}
+
+.new-book-container, .edit-book-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Form field optimizations */
+.add-book-form .form-group {
+    margin-bottom: 20px;
+}
