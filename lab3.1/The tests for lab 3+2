@@ -1,0 +1,36 @@
+First needed to install Cypress itself with 
+
+npm install --save-dev cypress
+
+(takes a few minutes).
+
+Then initialize it for using the first time with
+
+npx cypress open
+
+
+Later to create and run the tests, made a test file in the folder
+
+
+We can run the tests with the command: npx cypress open and then choosing the testing file OR simply run " npx cypress run --spec "name of the test file.js"  "
+
+
+Now talking about the tests, here's what they do 1 by 1, starting with the first one:
+
+
+Test 1: Main Page Structure Validation
+Checks that all UI elements are present and visible including header with "WELCOME TO MOONEY'S" text, 
+search section with proper heading and input placeholder, search button, 
+filter controls (price from/to inputs, cover type dropdown, author field, description field), book list header, and footer with copyright notice. Waits for loading to complete before validation.
+
+Test 2: Title Search Functionality
+Tests the search feature by dynamically extracting the first word from an existing book's title, entering it in the search field, 
+submitting the form, and verifying that all returned results contain the searched term. 
+Also tests the no-results scenario by searching for "NonExistentBook123" and confirming the "No books found matching your criteria" message appears.
+
+Test 3: Advanced Filtering System
+Tests all filter options systematically: selects "Hardcover" from cover dropdown and verifies only hardcover books display, 
+extracts author name from first book and filters by it, sets price range ($10-$50) and validates results fall within bounds using parseFloat validation, 
+sets page count range (100-500) and checks numeric values, and searches for "book" in descriptions using case-insensitive regex matching. Resets filters between tests to ensure clean state.
+
+
